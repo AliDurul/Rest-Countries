@@ -1,5 +1,6 @@
 import Challenge from "./Challenge";
-import Train from "./Train";
+import BuilIt from "./Compenents/BuilIt";
+// import Train from "./Train";
 // import Playgorund from "./Playgorund";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
 
       {/* <Playgorund/> */}
-    
+      <BuilIt/>
     </div>
   );
 }

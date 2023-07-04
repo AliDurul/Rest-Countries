@@ -5,7 +5,7 @@ import Train from "./Train";
 function App() {
   return (
     <div>
-      <Train/>
+      {/* <Train/> */}
       <Challenge/>
 
 

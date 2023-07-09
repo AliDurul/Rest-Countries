@@ -1,0 +1,66 @@
+.card_container {
+  position: static;
+  
+  &:hover{
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.95);
+  }
+  .card_content {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+
+    .back_card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+    }
+
+    .back_card {
+      transform: rotateY(270deg);
+      width: 100%;
+     padding-top: 3rem;
+      li{
+        list-style: none;
+
+      }
+    }
+    .front_card {
+      position: relative;
+      backface-visibility: hidden;
+
+      .img_div img{
+
+        height: 250px;
+        object-fit: cover;
+        transition: all .5s;
+        &:hover{
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+
+}
+
+.flipCard{
+    transform: rotateY(90deg);
+}
+
+.header{
+  img{
+    width: 200px;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+}
+
+body{
+  background-color: rgb(244, 212, 103);
+}
+.bg{
+  background-image: url("../assets/bg-img.png") ;
+  // background-size: cover;
+}

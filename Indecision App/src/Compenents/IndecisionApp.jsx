@@ -1,6 +1,7 @@
 import { useState } from "react";
+import Header from "./header/Header";
 
-const Challenge = () => {
+const IndecisionApp = () => {
   const [app, setApp] = useState({
     title: "Indecision App",
     subtitle: "Put your life in the hands of a computer",
@@ -36,8 +37,7 @@ const Challenge = () => {
 
   return (
     <div>
-      <h1>{app.title}</h1>
-      {app.subtitle && <p>{app.subtitle}</p>}
+      <Header {...app}/>
       <p>{app.options.length > 0 ? "Here are your options" : "No Options"}</p>
 
       <button disabled={app.options.length === 0} onClick={onMakeDecision}>What Should I Do?</button>
@@ -60,4 +60,4 @@ const Challenge = () => {
   );
 };
 
-export default Challenge;
+export default IndecisionApp;

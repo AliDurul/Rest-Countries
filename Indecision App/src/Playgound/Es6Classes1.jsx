@@ -1,5 +1,5 @@
 
-class Person {
+/* class Person {
     constructor(name = 'Anonymous', age = 0) {
         this.name = name
         this.age = age
@@ -54,7 +54,7 @@ console.log(me.hasMajor());
 console.log(other.getGreeting());
 
 console.log(me.getGreeting());
-console.log(me.getDescription());
+console.log(me.getDescription()); */
 
 const Es6Classes1 = () => {
     return (

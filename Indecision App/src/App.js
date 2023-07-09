@@ -1,4 +1,5 @@
-import Challenge from "./Challenge";
+import IndecisionApp from "./Compenents/IndecisionApp";
+
 import BuilIt from "./Playgound/BuilIt";
 import Es6Classes1 from "./Playgound/Es6Classes1";
 
@@ -8,9 +9,11 @@ import Es6Classes1 from "./Playgound/Es6Classes1";
 function App() {
   return (
     <div>
-      {/* <Challenge /> */}
 
-      <Es6Classes1 />
+      
+      <IndecisionApp />
+
+      {/* <Es6Classes1 /> */}
       {/* <Train/> */}
       {/* <Playgorund/> */}
       {/* <BuilIt/> */}

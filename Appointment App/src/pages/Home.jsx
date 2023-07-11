@@ -1,8 +1,11 @@
+import Doctors from "../compenents/Doctors"
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
+    return (
+        <div>
+            <Doctors />
+        </div>
+    )
 }
 
 export default Home

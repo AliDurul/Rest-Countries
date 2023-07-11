@@ -7,7 +7,6 @@ const Home = () => {
     const [dName, setDName] = useState("");
 
     const handleClose = (e) => {
-        
         setShow(false)
     };
     const handleShow = (e) => {

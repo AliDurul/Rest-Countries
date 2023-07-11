@@ -9,11 +9,18 @@ const AddModal = ({ show, dName, handleClose }) => {
     patientName: "",
     dataTime: ""
   })
+  const [valuesArr, setValuesArr] = useState([])
 
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(patientInf)
+    setValuesArr([...valuesArr, patientInf])
+    handleClose();
+
+  }
+
+  const handleValues = (e) => {
+    setPatientInf({ ...patientInf, [e.target.name]: e.target.value })
   }
   return (
     <>
@@ -26,29 +33,32 @@ const AddModal = ({ show, dName, handleClose }) => {
             <div className="mb-3">
               <label htmlFor="patientName" className="form-label fw-bold ">Patient Name</label>
               <input type="text" className="form-control" id="patientName" name="patientName" aria-describedby="emailHelp"
-                placeholder="Enter Your Name" />
+                placeholder="Enter Your Name" onChange={handleValues} required />
 
             </div>
             <div className="mb-3">
               <label htmlFor="dataTime" className="form-label fw-bold">Day&Time</label>
-              <input type="datetime-local" className="form-control" id="dataTime" name="dataTime" />
+              <input type="datetime-local" className="form-control" id="dataTime" name="dataTime" onChange={handleValues} required />
             </div>
-            <div>
-              <button type="submit" onClick={handleClose}>gonder</button>
-            </div>
-          </form>
-        </Modal.Body>
-        <Modal.Footer className="justify-content-center">
-              <Button type="submit" variant="primary" onClick={handleClose}>
+            <Modal.Footer className="justify-content-center">
+              <Button type="submit" variant="primary" >
                 Submit
               </Button>
               <Button variant="danger" onClick={handleClose}>
                 Close
               </Button>
             </Modal.Footer>
+          </form>
+        </Modal.Body>
+
       </Modal>
       {/* AppointmentList called */}
-      <AppointmentList />
+      <div className="container mt-5 ">
+        {
+          valuesArr.map((item, i) => <AppointmentList key={i} item={item} dname={dName} />)
+        }
+      </div>
+
     </>
   )
 }

@@ -1,7 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import AppointmentList from "./AppoinmentList";
+import { appointmentData } from "../helpers/data"
 import { useState } from "react";
+import Myappoinment from "./Myappoinment";
 
 const AddModal = ({ show, dName, handleClose }) => {
 
@@ -54,6 +56,9 @@ const AddModal = ({ show, dName, handleClose }) => {
       </Modal>
       {/* AppointmentList called */}
       <div className="container mt-5 ">
+        {
+          appointmentData.map((item)=> <Myappoinment item={item}/>)
+        }
         {
           valuesArr.map((item, i) => <AppointmentList key={i} item={item} dname={dName} />)
         }

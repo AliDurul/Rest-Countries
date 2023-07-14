@@ -1,9 +1,9 @@
 import Checkbox from "./Checkbox"
 
-const Tasks = ({name,done}) => {
+const Tasks = ({ name, done, onToggle }) => {
     return (
-        <div className="task">
-           <Checkbox defaultChecked={done}/>
+        <div className={'task' + (done ? ' done' : "")}>
+            <Checkbox checked={done} handleClick={() => onToggle(!done)} />
             {name}
         </div>
     )

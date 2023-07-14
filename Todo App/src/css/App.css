@@ -49,6 +49,7 @@ div.task svg{
 }
 div.task.done{
     opacity: 0.3;
+    text-decoration: line-through;
 }
 div.task-name, div.task form{
     flex-grow:1;

@@ -16,6 +16,11 @@ const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
 const Card = () => {
 
     const [person, setPerson] = useState(null);
+    const [button, setButton] = useState({
+        label: "",
+        value:""
+    })
+
 
     // const {picture:{medium} } = randomPerson
     /* ASYNC FUNCTION WITH AXIOS */
@@ -31,17 +36,18 @@ const Card = () => {
     }, []);
 
     const displayName = (e) => {
-       console.log(e);
+        let dataLabel = e.target
     }
+    console.log(person);
     
     return (
         <div className="block">
             <div className="container">
                 <img src={person?person.picture.medium:defaultImage} alt="random user" className="user-img" />
-                <p className="user-title">My ... is</p>
+                <p className="user-title">My {} is</p>
                 <p className="user-value"></p>
                 <div className="values-list">
-                    <button onClick={ (e)=>displayName(e)} className="icon" data-label="name">
+                    <button onClick={(e) => displayName(e)} className="icon" data-label="name">
                         <img src={womanSvg} alt="user" id="iconImg" />
                     </button>
                     <button className="icon" data-label="email">

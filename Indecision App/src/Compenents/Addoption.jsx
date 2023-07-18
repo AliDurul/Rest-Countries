@@ -8,7 +8,7 @@ const Addoption = ({ app, setApp }) => {
             /* merging new element in array AND mergin array in object*/
             setApp({
                 ...app,
-                options: [...app.options, optionInput.value.toUpperCase()],
+                options: [...app.options, optionInput.value.toUpperCase().trim()],
             });
             /* clearing input */
             optionInput.value = "";
@@ -18,7 +18,7 @@ const Addoption = ({ app, setApp }) => {
         <div className="mt-3">
 
             {/* form input and submit button */}
-            <form action="#" onSubmit={formSubmit}>
+            <form className="" action="#" onSubmit={formSubmit}>
                 <input type="text" name="option" />
                 <button type="submit">Add Option</button>
             </form>

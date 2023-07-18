@@ -1,9 +1,13 @@
 import { FaEdit } from "react-icons/fa"
 import { AiFillDelete } from "react-icons/ai"
 import axios from "axios"
-import Modal from "./Modal"
+import EditTutorial from "./EditTutorial"
+import { useState } from "react"
 
-const TutorialList = ({ tutorials , getTutorials}) => {
+
+const TutorialList = ({ tutorials, getTutorials }) => {
+
+const [editItem, setEditItem] = useState()
 
   const handleDelete = async (id) => {
     const base_url = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
@@ -43,6 +47,7 @@ const TutorialList = ({ tutorials , getTutorials}) => {
                     type="button"
                     className="me-2 text-warning"
                     data-bs-toggle="modal" data-bs-target="#open-modal"
+                    onClick={()=> setEditItem(item)}
                   />
                   <AiFillDelete
                     size={22}
@@ -56,7 +61,7 @@ const TutorialList = ({ tutorials , getTutorials}) => {
           })}
         </tbody>
       </table>
-      <Modal/>
+      <EditTutorial editItem={editItem} setEditItem={setEditItem} getTutorials={getTutorials} />
     </div>
   )
 }

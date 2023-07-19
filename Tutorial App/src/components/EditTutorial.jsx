@@ -4,8 +4,6 @@ import React, {  } from 'react'
 const EditTutorial = ({ editItem, setEditItem,getTutorials }) => {
     const base_url = "https://tutorial-api.fullstack.clarusway.com/tutorials"
 
-   
-
     const handleSubmit = async(e, editItem) => {
         e.preventDefault();
 

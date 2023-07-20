@@ -22,7 +22,7 @@ const People = () => {
           return (
             <div
               key={id}
-              className=" col-sm-12 col-md-6 col-lg-4"
+              className="col-sm-12 col-md-6 col-lg-4"
               type="button"
             >
               <img className="rounded" src={avatar} alt="img" />

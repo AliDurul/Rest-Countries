@@ -3,7 +3,7 @@ const About = () => {
     <article className="container p-3">
       <h1 className="text-center">ABOUT US</h1>
       <div className="row text-center d-flex justify-content-center">
-        <div className="col-sm-12 col-md-6 col-lg-4">
+        <div className="col-col-sm-12 md-6 col-lg-4">
           <i className="fas fa-globe-americas fa-2x"></i>
           <h4>Online Courses</h4>
           <p>

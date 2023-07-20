@@ -1,12 +1,12 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
 
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
 
   /* font-family: "Bona Nova", serif; */
 }
@@ -92,34 +92,32 @@ input:focus {
   transform: translate(-50%, -50%);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 05);
   background-color: rgba(255, 255, 255, 0.8);
-
 }
 .recipe-details {
   width: 70%;
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
+  /* flex-direction: column; */
   align-items: center;
   gap: 0 5rem;
 }
-.ingredients{
+.ingredients {
+  flex-basis: auto;
+}
+.instructions {
   flex-basis: auto;
 
-}
-.instructions{
-  flex-basis: 60%;
-  & h4{
-  margin-top: 1.5rem;
-  font-size: 16px;
-
+  & h4 {
+    margin-top: 1.5rem;
+    font-size: 16px;
   }
-
 }
 .ingredients,
 .instructions {
   padding: 1rem;
   text-align: justify;
-  
+
   box-shadow: 0 5px 5px rgba(0, 0, 0, 05);
   background-color: rgba(255, 255, 255, 0.8);
   & h2 {
@@ -156,5 +154,15 @@ input:focus {
     color: white;
     margin: 5px;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recipe-details {
+    flex-direction: column;
+    gap: 3rem 5rem;
+  }
+  .content .inner-content {
+    font-size: 1rem;
   }
 }

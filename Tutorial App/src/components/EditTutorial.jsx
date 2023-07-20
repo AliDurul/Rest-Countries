@@ -1,22 +1,22 @@
 import axios from 'axios'
-import React, {  } from 'react'
+import React, { useState } from 'react'
 
-const EditTutorial = ({ editItem, setEditItem,getTutorials }) => {
+const EditTutorial = ({ editItem, setEditItem, getTutorials }) => {
+
     const base_url = "https://tutorial-api.fullstack.clarusway.com/tutorials"
 
-    const handleSubmit = async(e, editItem) => {
-        e.preventDefault();
-
+    const handleSubmit = async (e) => {
+        e.preventDefault()
         try {
             await axios.put(`${base_url}/${editItem.id}/`, editItem)
         } catch (error) {
             console.log(error);
         }
         getTutorials()
-
     }
 
-    console.log(editItem);
+
+
     return (
         <div className="modal fade" id="open-modal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
@@ -27,7 +27,7 @@ const EditTutorial = ({ editItem, setEditItem,getTutorials }) => {
                         />
                     </div>
                     <div className="modal-body">
-                        <form onSubmit={(e) => handleSubmit(e,editItem)}>
+                        <form onSubmit={handleSubmit} >
                             <div className="mb-3">
                                 <label htmlFor="title" className="form-label">
                                     Title
@@ -56,11 +56,9 @@ const EditTutorial = ({ editItem, setEditItem,getTutorials }) => {
                                     required
                                 />
                             </div>
-                            <div className="text-end">
-                                <button type="submit" className="btn btn-success " data-bs-dismiss="modal">
-                                    Submit
-                                </button>
-                            </div>
+                            <button type="submit" className="btn btn-danger mb-4">
+                                Submit
+                            </button>
                         </form>
                     </div>
 

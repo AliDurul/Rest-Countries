@@ -7,7 +7,11 @@ import { useState } from "react"
 
 const TutorialList = ({ tutorials, getTutorials }) => {
 
-const [editItem, setEditItem] = useState()
+const [editItem, setEditItem] = useState({
+  id:"",
+  title:"",
+  description:""
+})
 
   const handleDelete = async (id) => {
     const base_url = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
@@ -18,7 +22,6 @@ const [editItem, setEditItem] = useState()
     }
     getTutorials()
   }
-
 
   return (
     <div className="container mt-4">
@@ -46,7 +49,8 @@ const [editItem, setEditItem] = useState()
                     size={20}
                     type="button"
                     className="me-2 text-warning"
-                    data-bs-toggle="modal" data-bs-target="#open-modal"
+                    data-bs-toggle="modal" 
+                    data-bs-target="#open-modal"
                     onClick={()=> setEditItem(item)}
                   />
                   <AiFillDelete

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import MealItem from "./MealItem";
-import ReacipeIndex from "./ReacipeIndex";
+import MealItem from "../components/MealItem";
+import ReacipeIndex from "../components/ReacipeIndex";
 
 import axios from "axios"
 

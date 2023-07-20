@@ -1,12 +1,15 @@
-import Meal from "./components/Meal"
+import Meal from "./components/Meal";
+import "./components/style.css";
+import { Routes, Route } from "react-router-dom";
 
-import "./components/style.css"
 function App() {
   return (
     <div className="App">
-    <Meal/>
+      <Routes>
+        <Route path="/" element={<Meal />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

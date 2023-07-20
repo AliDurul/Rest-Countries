@@ -1,5 +1,4 @@
 import axios from 'axios'
-import React, { useState } from 'react'
 
 const EditTutorial = ({ editItem, setEditItem, getTutorials }) => {
 
@@ -14,8 +13,6 @@ const EditTutorial = ({ editItem, setEditItem, getTutorials }) => {
         }
         getTutorials()
     }
-
-
 
     return (
         <div className="modal fade" id="open-modal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">

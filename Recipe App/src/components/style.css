@@ -1,11 +1,14 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
 
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Bona Nova", serif;
+  font-family: 'Gloria Hallelujah', cursive;
+
+  /* font-family: "Bona Nova", serif; */
 }
 body {
   background-color: #ffffff;
@@ -37,11 +40,11 @@ body {
   font-size: 1.1rem;
   background-color: #043e53;
 }
-input::placeholder{
-    color: #dddada;
+input::placeholder {
+  color: #dddada;
 }
 input:focus {
-    color: #ffffff;
+  color: #ffffff;
 }
 .container {
   width: 100%;
@@ -69,15 +72,16 @@ input:focus {
 }
 .card h3 {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   padding: 5px 0;
 }
+
 .content img {
   width: 100%;
-  height: 600px;
+  height: 100vh;
+  object-fit: cover;
 }
 .content .inner-content {
-  background-color: rgba(255, 255, 255, 0.8);
   color: black;
   font-size: 1.5rem;
   padding: 2rem;
@@ -87,6 +91,8 @@ input:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 05);
+  background-color: rgba(255, 255, 255, 0.8);
+
 }
 .recipe-details {
   width: 70%;
@@ -94,14 +100,36 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0 5rem;
+}
+.ingredients{
+  flex-basis: auto;
+
+}
+.instructions{
+  flex-basis: 60%;
+  & h4{
+  margin-top: 1.5rem;
+  font-size: 16px;
+
+  }
+
 }
 .ingredients,
 .instructions {
-  flex-basis: 50%;
+  padding: 1rem;
   text-align: justify;
+  
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 05);
+  background-color: rgba(255, 255, 255, 0.8);
+  & h2 {
+    background-color: #043e53;
+    color: #ffffff;
+    text-align: center;
+  }
 }
 .ingredients h4 {
-  margin-top: 1.5rem;
+  margin-top: 0.8rem;
   font-weight: bold;
 }
 .video {
@@ -113,15 +141,15 @@ input:focus {
   margin: 2.5rem 0;
 }
 .numBox-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
   & .numBox {
     width: 50px;
     height: 40px;
-    background-color: #043e53;;
+    background-color: #043e53;
     display: flex;
     justify-content: center;
     align-items: center;

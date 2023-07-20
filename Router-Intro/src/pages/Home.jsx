@@ -4,8 +4,8 @@ import Courses from '../components/Courses';
 const Home = () => {
   return (
     <div>
-      <About />
-      <Courses />
+   {/*    <About />
+      <Courses /> */}
     </div>
   );
 };

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const People = () => {
   const [people, setPeople] = useState([]);
+  const [base_url, setBase_url] = useState("https://reqres.in/api/users")
 
   const getPeople = () => {
-    fetch("https://reqres.in/api/users")
+    fetch(base_url)
       .then((res) => res.json())
       .then((data) => setPeople(data.data))
       .catch((err) => console.log(err));
@@ -13,6 +15,7 @@ const People = () => {
     getPeople();
   }, []);
 
+  let navigate = useNavigate()
   return (
     <div className="container text-center mt-4">
       <h1>PEOPLE LIST</h1>
@@ -24,6 +27,7 @@ const People = () => {
               key={id}
               className="col-sm-12 col-md-6 col-lg-4"
               type="button"
+              onClick={()=>navigate(`${id}`)}
             >
               <img className="rounded" src={avatar} alt="img" />
               <h6>

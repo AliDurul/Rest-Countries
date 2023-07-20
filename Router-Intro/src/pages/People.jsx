@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 const People = () => {
   const [people, setPeople] = useState([]);
-  const [base_url, setBase_url] = useState("https://reqres.in/api/users")
 
   const getPeople = () => {
-    fetch(base_url)
+    fetch("https://reqres.in/api/users")
       .then((res) => res.json())
       .then((data) => setPeople(data.data))
       .catch((err) => console.log(err));

@@ -5,7 +5,7 @@ const ReacipeIndex = ({alphaIndex}) => {
    let num=0;
 
    return ( 
-        <>
+        <div className="numBox-container">
             {   
                 alpha.map(item => {
                     return(
@@ -14,7 +14,7 @@ const ReacipeIndex = ({alphaIndex}) => {
                     </div>)
                 })
             }
-        </>
+        </div>
     )
 }
 export default ReacipeIndex;

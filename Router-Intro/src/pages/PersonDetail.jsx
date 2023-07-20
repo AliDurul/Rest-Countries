@@ -5,20 +5,16 @@ const PersonDetail = () => {
     let { id } = useParams()
     const [person, setPerson] = useState()
 
-    const getPeople = () => {
+    const getPerson = () => {
         fetch(`https://reqres.in/api/users/${id}`)
             .then((res) => res.json())
             .then((data) => setPerson(data.data))
             .catch((err) => console.log(err));
     };
-    console.log(person);
+
     useEffect(() => {
-        getPeople()
-
+        getPerson()
     }, [])
-
-
-
 
     let navigate = useNavigate()
     return (

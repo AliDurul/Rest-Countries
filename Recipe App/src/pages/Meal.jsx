@@ -4,8 +4,10 @@ import ReacipeIndex from "../components/ReacipeIndex";
 
 import axios from "axios"
 
+
 const Meal = () => {
 
+  
     const [meals, setMeals] = useState()
     const [search, setSearch] = useState("")
 
@@ -45,6 +47,7 @@ const Meal = () => {
                     <form action="" >
                         <input type="search" className="search-bar"
                         placeholder="Search for meal.."
+                        
                         onChange={(e) => handleSearch(e)} />
                     </form>
                 </div>

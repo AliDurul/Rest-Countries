@@ -8,7 +8,7 @@ import IpContext from '../context/UserIpAddress'
 
 export const Header = () => {
 
-  const { userip, setUserip } = useContext(IpContext)
+  const { setUserip } = useContext(IpContext)
 
   const [inputdata, setInputdata] = useState("")
 
@@ -18,16 +18,17 @@ export const Header = () => {
 
   }
 
-  const handleKeyDown = (e) => {
-    if ((inputdata !== "") && (e.onKeyDown === 13)) {
-    e.preventDefault()
-      
-      handleSubmit()
-    }
-  }
+  /*   const handleKeyDown = (e) => {
+      if ((inputdata !== "") && (e.onKeyDown === 13)) {
+        e.preventDefault()
+  
+        handleSubmit()
+      }
+    } */
 
-console.log(inputdata);
-  console.log(userip);
+
+
+
   return (
     <>
 
@@ -54,7 +55,7 @@ console.log(inputdata);
                 placeholder='Your IP Address'
                 required
                 onChange={(e) => setInputdata(e.target.value)}
-                onKeyDown={handleKeyDown}
+              /*    onKeyDown={handleKeyDown} */
               />
 
             </form>

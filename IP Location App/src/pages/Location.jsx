@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Outlet } from 'react-router-dom'
+import IpContext from '../context/UserIpAddress'
 
 
 export const Location = () => {
 
-  <Outlet/>
+
 
   return (
 
     
-
     <div className='col-sm-4 col-md-4 m-auto cardTable'>
         <table className='table table-borderless table-dark text-center m-auto' width={25}>
         <thead>

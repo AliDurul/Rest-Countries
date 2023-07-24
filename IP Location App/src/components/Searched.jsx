@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import IpContext from '../context/UserIpAddress';
 
 
 export const Searched = () => {

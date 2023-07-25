@@ -8,12 +8,16 @@ const Card = ({ data }) => {
         <CardWrapper>
             {
                 data?.map(item => {
-                    const { id,volumeInfo: { title, imageLinks: { thumbnail } } } = item;
+                    // const { id, volumeInfo: { title, imageLinks: { thumbnail } } } = item;
                     return (
-                        <CardDiv key={id}>
-                            <h1>{title}</h1>
-                            <img src={thumbnail} alt="" />
-                            <button  onClick={() => navigate(`/detail/${id}`,{state:item} )}>VIEW MORE</button>
+                        <CardDiv key={item.id}>
+                            <h1>{item.volumeInfo.title}</h1>
+                            <img src={item?.volumeInfo?.imageLinks?.smallThumbnail} alt="" />
+                            <button
+                                onClick={() => navigate(`/detail/${item.id}`, { state: item })}
+                            >
+                                VİEW MORE
+                            </button>
                         </CardDiv>
                     )
                 })

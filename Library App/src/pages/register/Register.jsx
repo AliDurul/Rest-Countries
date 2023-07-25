@@ -1,8 +1,11 @@
 import React from 'react'
-
+import register from "../../assets/const.png"
+import FlexDiv from '../../styles/Flex'
 const Register = () => {
   return (
-    <div>Register</div>
+    <FlexDiv>
+      <img src={register} alt="" />
+    </FlexDiv>
   )
 }
 

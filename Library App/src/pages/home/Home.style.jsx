@@ -6,6 +6,7 @@ export const DivForm = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.5rem;
 
 `;
 
@@ -21,14 +22,14 @@ const FormStyled = styled.form`
     border: 1px solid rgba(15, 63, 42, 0.3);
     margin: 20px;
     gap: 20px 0;
-    padding: 1rem 1rem;
+    padding: 1.4rem 1rem;
     input{
     height: 3rem;
     width: 55%;
     border: none;
     border-radius: 1rem 3px 3px 1rem;
     text-indent: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: rgba(255, 255, 255, 0.5);
     }
     select{
@@ -37,18 +38,22 @@ const FormStyled = styled.form`
     height: 3rem;
     width: 40%;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: rgba(255, 255, 255, 0.8);
     }
     button{
     background-color: rgb(225, 241, 221);
-    padding: 5px;
+    padding: 7px;
     height: 3rem;
     border: none;
     margin: 0 1rem;
     border-radius: 1rem 3px;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    transition: all 1s;
+    &:hover{
+      background-color: white;
+    }
     }
 
 `;

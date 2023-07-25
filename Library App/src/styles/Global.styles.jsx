@@ -8,9 +8,8 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-style: italic;
-    }
-body{
-    font-family: 'Shantell Sans', cursive;
+        font-family: 'Shantell Sans', cursive;
 
-}
+    }
+
 `

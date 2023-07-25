@@ -1,5 +1,5 @@
 import React from 'react'
-import Navstyled, { LinkStyled } from './Navbar.style'
+import Navstyled, { LinkStyled,LinkDiv } from './Navbar.style'
 
 
 const Navbar = () => {
@@ -8,12 +8,12 @@ const Navbar = () => {
       <div>
         <h1>Lee Library</h1>
       </div>
-      <div>
+      <LinkDiv>
         <LinkStyled to="/" >HOME</LinkStyled>
         <LinkStyled to="about">ABOUT</LinkStyled>
         <LinkStyled to="register">REGISTER</LinkStyled>
         <LinkStyled to="login">LOGOUT</LinkStyled>
-      </div>
+      </LinkDiv>
     </Navstyled>
   )
 }

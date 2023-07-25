@@ -56,7 +56,7 @@ const FormStyled = styled.form`
 
 export const ImgStyled = styled.img`
     height: 60%;
-    width: 70%;
+    width: 45%;
     object-fit: cover;
     border-radius: 20px;
     

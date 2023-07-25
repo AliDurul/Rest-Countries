@@ -33,7 +33,7 @@ const Home = () => {
             <DivForm>
             <h2>BOOKS OR MAGAZINES</h2>
                 <FormStyled action="" onSubmit={handleSubmit} >
-                    <input type="search" placeholder='Search..' onChange={(e)=>setQuery(e.target.value)}/>
+                    <input type="search" placeholder='Search..' value={query} onChange={(e)=>setQuery(e.target.value)}/>
                     <select name="type" id="type" onChange={(e)=>setOption(e.target.value)}>
                         <option  value="all">ALL</option>
                         <option value="books">BOOKS</option>
@@ -46,7 +46,7 @@ const Home = () => {
             </DivForm>
 
           {
-            !data ? <ImgStyled src={books} alt="" /> : <Card/>
+            !data ? <ImgStyled src={books} alt="" /> : <Card data={data}/>
           }
                 
                 

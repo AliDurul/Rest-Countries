@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 const Navstyled = styled.nav`
   display: flex;
-  width: 100vw;
-  padding: 1rem;
+  width: 100%;
+  padding: 2rem;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   h1{
     color: darkslategray;
     text-decoration: none;

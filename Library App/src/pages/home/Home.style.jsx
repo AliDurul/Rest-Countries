@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const DivForm = styled.div`
-  width: 100vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,7 +60,7 @@ const FormStyled = styled.form`
 
 
 export const ImgStyled = styled.img`
-    height: 60%;
+    height:500px;
     width: 45%;
     object-fit: cover;
     border-radius: 20px;

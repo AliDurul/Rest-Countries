@@ -6,12 +6,18 @@ const FlexDiv = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  /* width: 100vw; */
-  height: calc(100vh - 77px);
-  /* margin: 1rem auto; */
   padding-top:2rem;
-  background-color:${({bg}) => bg ?? " #5D9687"  } ;
+  background-color:${({ bg }) => bg && bg} ;
+  /* width: 10%; */
 
 `;
+
+export const LoginFlexDiv = styled(FlexDiv)`
+  height: calc(100vh - 76px);
+    
+`
+
+
+
 
 export default FlexDiv;

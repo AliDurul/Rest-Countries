@@ -29,7 +29,7 @@ const Home = () => {
     }
 
     return (
-        <FlexDiv>
+        <FlexDiv  >
             <DivForm>
             <h2>BOOKS OR MAGAZINES</h2>
                 <FormStyled action="" onSubmit={handleSubmit} >

@@ -1,10 +1,10 @@
 import React from 'react'
-import FlexDiv from '../../styles/Flex'
-import { DivLogin, FormLogin } from './Login.style'
+import { LoginFlexDiv } from '../../styles/Flex'
+import {  FormLogin } from './Login.style'
 
 const Login = () => {
   return (
-    <FlexDiv bg="#bebe">
+    <LoginFlexDiv bg="#bebe">
  
         <FormLogin>
           <h1>lOGIN HERE</h1>
@@ -13,7 +13,7 @@ const Login = () => {
           <button type='submit'>LOGIN</button>
         </FormLogin>
    
-    </FlexDiv>
+    </LoginFlexDiv>
   )
 }
 

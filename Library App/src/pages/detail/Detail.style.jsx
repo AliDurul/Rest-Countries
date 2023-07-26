@@ -8,7 +8,7 @@ const DetailDiv = styled.div`
     margin: 1rem;
     border: 1px solid white;
     border-radius: 5px;
-    background-color: rgb(225, 241, 221);
+    background-color:  rgb(206, 230, 243);;
     color: rgb(5, 5, 5);
     width: 80%;
     h1{

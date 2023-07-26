@@ -30,6 +30,7 @@ div{
 export const LinkDiv = styled.div`
   display: flex;
   gap: 2rem;
+
   @media (max-width:800px) {
     flex-direction: column;
   }
@@ -43,6 +44,10 @@ export const LinkStyled = styled(NavLink)`
     color: rgb(139, 126, 116);
     transition: all 0.3s ease-in 0s;
     font-size: 1.5rem;
+    font-weight:bold;
+    &:hover{
+      color: black;
+    }
     `;
 
 

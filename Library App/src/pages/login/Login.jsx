@@ -12,7 +12,7 @@ const navigate = useNavigate()
   const handlesubmit = (e) => {
     e.preventDefault();
     setUser({username:e.target[0].value,password:e.target[1].value})
-    navigate("/")
+    navigate(-1)
   }
 
   return (

@@ -7,7 +7,6 @@ export const DivForm = styled.div`
   flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
-
 `;
 
 const FormStyled = styled.form`
@@ -16,7 +15,8 @@ const FormStyled = styled.form`
     max-width: 690px;
     flex-wrap: wrap;
     justify-content: center;
-    background: rgba(15, 63, 42, 0.36);
+    /* background:rgba(223, 168, 120,0.6); */
+    background:rgba(244, 242, 222,0.6);
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 30px;
     border: 1px solid rgba(15, 63, 42, 0.3);
@@ -30,7 +30,8 @@ const FormStyled = styled.form`
     border-radius: 1rem 3px 3px 1rem;
     text-indent: 10px;
     font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid black ;
     }
     select{
     border-radius: 3px 1rem 1rem 3px;
@@ -42,7 +43,8 @@ const FormStyled = styled.form`
     background-color: rgba(255, 255, 255, 0.8);
     }
     button{
-    background-color: rgb(225, 241, 221);
+    /* background-color:rgb(206, 230, 243); */
+    background-color:rgba(233, 179, 132,0.7);
     padding: 7px;
     height: 3rem;
     border: none;

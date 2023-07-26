@@ -23,7 +23,8 @@ export const CardDiv = styled.div`
     width: 20rem;
     max-width: 20rem;
     max-height: 20rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.709);
+    /* background-color:rgba(223, 168, 120,0.6); */
     padding: 0.5rem;
     border-radius: 1rem;
     margin: 0.7rem;
@@ -47,8 +48,13 @@ button{
     margin: 0.5rem;
     border-radius: 3px;
     cursor: pointer;
-    background: rgb(134, 200, 188);
+    background: rgb(206, 230, 243);
     color: rgb(5, 5, 5);
+    transition: all 0.3s;
+    
+    &:hover{
+        transform: scale(0.9);
+    }
 }
     
 `;

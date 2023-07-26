@@ -7,7 +7,10 @@ const Navstyled = styled.nav`
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  /* background-color: white; */
+      background: rgba(255, 255, 255, 0.79);
+   background-color: ${(props) => props.theme.backgroundColor};
+   color: ${(props) => props.theme.textColor};
 div{
   cursor: pointer;
   

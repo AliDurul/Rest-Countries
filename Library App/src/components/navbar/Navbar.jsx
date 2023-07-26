@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import Navstyled, { LinkStyled, LinkDiv } from './Navbar.style'
 import { useNavigate } from 'react-router-dom'
 import AuthContext from '../../context/AuthContext'
+import { ThemeContext } from '../../context/ThemeContext'
 
 
 const Navbar = () => {
@@ -9,8 +10,9 @@ const Navbar = () => {
 
   const { user,setUser } = useContext(AuthContext)
 
+
   return (
-    <Navstyled>
+    <Navstyled theme>
       <div onClick={() => navigate("/")}>
         <h1 >Lee Library</h1>
       </div>

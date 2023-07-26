@@ -8,6 +8,11 @@ const Navstyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: white;
+div{
+  cursor: pointer;
+  
+}
+
   h1{
     color: darkslategray;
     text-decoration: none;

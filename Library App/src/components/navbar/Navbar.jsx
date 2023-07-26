@@ -1,18 +1,26 @@
-import React from 'react'
-import Navstyled, { LinkStyled,LinkDiv } from './Navbar.style'
+import React, { useContext } from 'react'
+import Navstyled, { LinkStyled, LinkDiv } from './Navbar.style'
+import { useNavigate } from 'react-router-dom'
+import AuthContext from '../../context/AuthContext'
 
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
+  const { user,setUser } = useContext(AuthContext)
+
   return (
     <Navstyled>
-      <div>
-        <h1>Lee Library</h1>
+      <div onClick={() => navigate("/")}>
+        <h1 >Lee Library</h1>
       </div>
       <LinkDiv>
         <LinkStyled to="/" >HOME</LinkStyled>
         <LinkStyled to="about">ABOUT</LinkStyled>
-        <LinkStyled to="register">REGISTER</LinkStyled>
-        <LinkStyled to="login">LOGOUT</LinkStyled>
+        {!user && <LinkStyled to="register">REGISTER</LinkStyled>}
+        {
+          user ? <LinkStyled to="login" onClick={()=>setUser("")}>LOGOUT</LinkStyled> : <LinkStyled to="login">LOGIN</LinkStyled>
+        }
       </LinkDiv>
     </Navstyled>
   )

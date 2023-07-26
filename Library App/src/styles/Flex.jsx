@@ -13,8 +13,13 @@ const FlexDiv = styled.div`
 `;
 
 export const LoginFlexDiv = styled(FlexDiv)`
-  height: calc(100vh - 76px);
-    
+  background-image: url(${({pic})=>pic && pic});
+  /* background-color: #cccccc; */
+  height: calc(100vh - 110px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 `
 
 

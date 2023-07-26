@@ -31,5 +31,10 @@ export const IconDiv = styled.div`
   font-size: 2rem;
   i {
     margin-right: 15px;
+    transition: all 0.5s;
+    &:hover{
+        color: #030324;
+        transform: scale(1.2);
+    }
   }
 `;

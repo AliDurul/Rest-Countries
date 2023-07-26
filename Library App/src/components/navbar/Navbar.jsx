@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import Navstyled, { LinkStyled, LinkDiv } from './Navbar.style'
 import { useNavigate } from 'react-router-dom'
 import AuthContext from '../../context/AuthContext'
-import { ThemeContext } from '../../context/ThemeContext'
 
 
 const Navbar = () => {

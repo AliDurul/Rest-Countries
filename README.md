@@ -10,7 +10,6 @@
 [Router-Intro](https://react-intro-routers.netlify.app/)| React Js, Html, Css, Bootstrap
 [Tutorial App](https://react-tutorialapp-database.netlify.app/)| React Js, Html, Css, Bootstrap
 [IP Location App]()| React Js, Html, Css, Bootstrap
-[Router-Intro]()| React Js, Html, Css, Bootstrap
 [Library App](https://lee-library.vercel.app/)| React Js, Html, Styled Component
 
 
